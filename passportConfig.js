@@ -15,7 +15,7 @@ exports.initializePassport = (passport) => {
 
             if (user.password !== password) {
                 return done(null, false);
-            }
+            }            
 
             return done(null, user);
         } catch (err) {
@@ -43,5 +43,5 @@ exports.isAuthenticated = (req, res, next) => {
         return next();
     }
 
-    res.redirect("/");
+    res.redirect("/signin");
 }

@@ -34,6 +34,9 @@ app.use('/', loginPageRoute)
 const signUpPageRoute = require('./routes/signUpPage')
 app.use('/', signUpPageRoute)
 
+const profilePageRoute = require('./routes/profilePage')
+app.use('/', profilePageRoute)
+
 app.listen(port, (req, res) => {
     console.log(`Your server⚡ is running at: http://localhost:${port}/`)
 })
