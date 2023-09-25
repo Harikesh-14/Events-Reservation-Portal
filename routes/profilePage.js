@@ -7,8 +7,8 @@ require('mongoose')
 require('../database/conn')
 
 router.get('/', isAuthenticated, (req, res) => {
-    const { firstName, lastName, gender, phoneNumber, emailID } = req.user
-    res.render('profile', {firstName, lastName, gender, phoneNumber, emailID})
+    const { firstName, lastName, gender, phoneNumber, emailID, address } = req.user
+    res.render('profile', { firstName, lastName, gender, phoneNumber, emailID, address })
 })
 
 router.get('/logout', async function (req, res, next) {
